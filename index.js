@@ -58,8 +58,10 @@ function init() {
     inquirer.prompt(questions)
     .then ((userResponse) => {
         console.log('userResponse:', userResponse);
-    });
+
     writeToFile('generatedReadMe.md', generateMarkdown({ ...userResponse}));
-};
+});
+}
+
 // Function call to initialize app
 init();
